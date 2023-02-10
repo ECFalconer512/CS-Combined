@@ -154,7 +154,7 @@ public class LargestNumberSolver {
         String number = bigNum.toString();
 
         // final return
-        return Integer.parseInt(number);
+        return Long.parseLong(number);
     }
 
     /**
