@@ -181,6 +181,11 @@ public class LargestNumberSolver {
      * @throws IllegalArgumentException
      */
     public static Integer[] findKthLargest(List<Integer[]> list, int k) throws IllegalArgumentException{
+
+        if (k > list.size() - 1) {
+            throw new IllegalArgumentException("K is out of range for list");
+        }
+
         Integer[][] numbers = list.toArray(new Integer[0][]);
         insertionSort(numbers, (Integer[] nums1, Integer[] nums2) -> {
             BigInteger num1 = findLargestNumber(nums1);

@@ -11,7 +11,7 @@ public class LargestNumberSolverTimer {
         int timesToLoop = 100;
 
         // For each problem size n . . .
-        for (int n = 1_000; n <= 20_000; n += 1_000) {
+        for (int n = 100; n <= 2000; n += 100) {
 
             final int k = n;
             Thread t = new Thread() {
@@ -60,7 +60,7 @@ public class LargestNumberSolverTimer {
                     System.out.println(k + ", " + averageTime);
                 }
             };
-
+            t.run();
         }
     }
 }

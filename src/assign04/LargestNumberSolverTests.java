@@ -212,6 +212,16 @@ public class LargestNumberSolverTests {
         assertArrayEquals(new Integer[]{47, 73, 6}, LargestNumberSolver.findKthLargest(list, 2));
     }
 
+    @Test
+    public void testKthOutOfBounds(){
+        ArrayList<Integer[]> list = new ArrayList<Integer[]>();
+        list.add(new Integer[]{88, 51});
+        list.add(new Integer[]{92, 89, 39, 7, 21});
+        list.add(new Integer[]{31, 7, 44, 11, 623, 21});
+        list.add(new Integer[]{47, 73, 6});
+        assertThrows(IllegalArgumentException.class, () -> {LargestNumberSolver.findKthLargest(list, 5);});
+    }
+
     // All inclusive Tests -------------------------------------------------------------------------------------------
 
     @Test
